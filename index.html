@@ -1,23 +1,102 @@
 <!DOCTYPE html>
 <html>
     <style>
-        body {
-            background-color:navajowhite;
+        /* let boxes be next to eachother */
+        *{box-sizing: border-box;}
+        /*background settings */
+        body {background-color:navajowhite;}
+        .row::after {
+            content: "";
+            display: table;
+            clear: both;
         }
+        /* type settings */
+        h1 {color:black; font-size:75px; text-align: center; vertical-align: middle;}
+        .h3 {color:white; font-size:35px; text-align: center; vertical-align: middle; font-family: "Lucida Handriting", cursive;}
+        .p1 {font-family: "Lucida Handriting", cursive; color: white; font-size:20px;}
+        p {font-family:sans; font-size:20px;}
 
-        header {
-            background-color: olive;
+        /* header and footer settings */
+        .header {
             padding: 30px;
             text-align: center;
-            font-size: 35px;
+            vertical-align: middle;
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+        .footer {
+            padding: 20px;
+            text-align: center;
+            background: #BA8C63;
+            margin-top: 20px;
+        }
+        /* navigation bar */
+        .topnav {
+            overflow: hidden;
+            background-color: #BA8C63;
+        }
+        .topnav button {
+            float: left;
+            display: block;
+            font-family: "Lucida Handriting", cursive;
             color: white;
-}
+            font-size:18px;
+            background-color: #32612d;
+            border-style: ridge;
+            border-color: #BA8C63;
+            border-width: 15px;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            width: 33.333%;
+            height: 100%;
+        }
+        .topnav button:hover {
+            background-color: #000;
+        }
+        /* main cells */
+        .leftcolumn {   
+            float: left;
+            width: 70%;
+        }
+        .rightcolumn {
+            float: left;
+            width: 30%;
+            padding-left: 20px;
+        }
+        .textcard {
+            background-color: #32612d;
+            border-style: ridge;
+            border-color: #BA8C63;
+            border-width: 15px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .imagecard {
+            padding: 20px;
+            margin-top: 20px;
+        }
     </style>
-<body>
-    <header>
-        <h1>Riley J. Guyett</h1>
-      </header>
-<p>I'm hosted with GitHub Pages.</p>
-<p>This page is very much in progress. Updates are still to come.</p>
-</body>
+
+    <body>
+
+        <div class="header"><h1>Riley J. Guyett</h1></div>
+        <div class="topnav"> <button href="#">Papers and Presentations</button>  <button href="#">Lecture Notes</button>  <button href="#">Readings</button></div>
+        <div class="row">
+            <div class="leftcolumn"> 
+                <div class="textcard"> 
+                    <h3 class="h3"> ABOUT ME </h3>
+                    <p class="p1"> &#x2022; Current Ph. D. student at Rutgers University </p>
+                    <p class="p1"> &#x2022; Recieved B.A. in mathematics summa cum laude from Cornell University in 2023 </p>
+                    <p class="p1"> &#x2022; Interested in complex geometry, Teichmüller theory, mathematical physics, and lattice-based cryptography </p>
+                </div>
+                <div class="textcard"> 
+                    <h3 class="h3"> WEBSITE STATUS </h3>
+                    <p class="p1">&#x2022; I'm hosted with GitHub Pages</p>
+                    <p class="p1"> &#x2022; This page is very much in progress</p>
+                </div>
+            </div>
+        <div class="footer">
+            <p> footer </p>
+        </div>
+    </body>
 </html>
